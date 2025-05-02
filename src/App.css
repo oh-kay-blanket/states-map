@@ -1,0 +1,42 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+#map-container {
+	width: 96%;
+	height: min-content;
+	max-width: 700px;
+	margin: 1rem auto;
+  }
+
+  svg {
+	/* width: 100%;
+	height: 100%; */
+	border: 2px solid #ccc;
+	border-radius: 16px;
+  }
+  
+  path {
+	stroke: white;
+	transition: fill 0.4s ease;
+  }
+  
+  .tooltip {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: gray;
+	color: white;
+	position: absolute;
+  }
+  
