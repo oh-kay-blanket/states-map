@@ -1,0 +1,410 @@
+[
+  {
+    "id": "AL",
+    "name": "Alabama",
+    "coordinates": [
+      -86.9023,
+      32.3182
+    ]
+  },
+  {
+    "id": "AK",
+    "name": "Alaska",
+    "coordinates": [
+      -149.4937,
+      64.2008
+    ]
+  },
+  {
+    "id": "AZ",
+    "name": "Arizona",
+    "coordinates": [
+      -111.0937,
+      34.0489
+    ]
+  },
+  {
+    "id": "AR",
+    "name": "Arkansas",
+    "coordinates": [
+      -92.3731,
+      34.9697
+    ]
+  },
+  {
+    "id": "CA",
+    "name": "California",
+    "coordinates": [
+      -119.4179,
+      36.7783
+    ]
+  },
+  {
+    "id": "CO",
+    "name": "Colorado",
+    "coordinates": [
+      -105.7821,
+      39.5501
+    ]
+  },
+  {
+    "id": "CT",
+    "name": "Connecticut",
+    "coordinates": [
+      -72.7554,
+      41.6032
+    ]
+  },
+  {
+    "id": "DE",
+    "name": "Delaware",
+    "coordinates": [
+      -75.5277,
+      38.9108
+    ]
+  },
+  {
+    "id": "FL",
+    "name": "Florida",
+    "coordinates": [
+      -81.5158,
+      27.6648
+    ]
+  },
+  {
+    "id": "GA",
+    "name": "Georgia",
+    "coordinates": [
+      -82.9001,
+      32.1656
+    ]
+  },
+  {
+    "id": "HI",
+    "name": "Hawaii",
+    "coordinates": [
+      -155.5828,
+      19.8968
+    ]
+  },
+  {
+    "id": "ID",
+    "name": "Idaho",
+    "coordinates": [
+      -114.742,
+      44.0682
+    ]
+  },
+  {
+    "id": "IL",
+    "name": "Illinois",
+    "coordinates": [
+      -89.3985,
+      40.6331
+    ]
+  },
+  {
+    "id": "IN",
+    "name": "Indiana",
+    "coordinates": [
+      -86.1349,
+      40.2672
+    ]
+  },
+  {
+    "id": "IA",
+    "name": "Iowa",
+    "coordinates": [
+      -93.0977,
+      41.878
+    ]
+  },
+  {
+    "id": "KS",
+    "name": "Kansas",
+    "coordinates": [
+      -98.4842,
+      39.0119
+    ]
+  },
+  {
+    "id": "KY",
+    "name": "Kentucky",
+    "coordinates": [
+      -84.27,
+      37.8393
+    ]
+  },
+  {
+    "id": "LA",
+    "name": "Louisiana",
+    "coordinates": [
+      -91.9623,
+      30.9843
+    ]
+  },
+  {
+    "id": "ME",
+    "name": "Maine",
+    "coordinates": [
+      -69.4455,
+      45.2538
+    ]
+  },
+  {
+    "id": "MD",
+    "name": "Maryland",
+    "coordinates": [
+      -76.6413,
+      39.0458
+    ]
+  },
+  {
+    "id": "MA",
+    "name": "Massachusetts",
+    "coordinates": [
+      -71.3824,
+      42.4072
+    ]
+  },
+  {
+    "id": "MI",
+    "name": "Michigan",
+    "coordinates": [
+      -85.6024,
+      44.3148
+    ]
+  },
+  {
+    "id": "MN",
+    "name": "Minnesota",
+    "coordinates": [
+      -94.6859,
+      46.7296
+    ]
+  },
+  {
+    "id": "MS",
+    "name": "Mississippi",
+    "coordinates": [
+      -89.3985,
+      32.3547
+    ]
+  },
+  {
+    "id": "MO",
+    "name": "Missouri",
+    "coordinates": [
+      -91.8318,
+      37.9643
+    ]
+  },
+  {
+    "id": "MT",
+    "name": "Montana",
+    "coordinates": [
+      -110.3626,
+      46.8797
+    ]
+  },
+  {
+    "id": "NE",
+    "name": "Nebraska",
+    "coordinates": [
+      -99.9018,
+      41.4925
+    ]
+  },
+  {
+    "id": "NV",
+    "name": "Nevada",
+    "coordinates": [
+      -116.4194,
+      38.8026
+    ]
+  },
+  {
+    "id": "NH",
+    "name": "New Hampshire",
+    "coordinates": [
+      -71.5724,
+      43.1939
+    ]
+  },
+  {
+    "id": "NJ",
+    "name": "New Jersey",
+    "coordinates": [
+      -74.4057,
+      40.0583
+    ]
+  },
+  {
+    "id": "NM",
+    "name": "New Mexico",
+    "coordinates": [
+      -105.8701,
+      34.5199
+    ]
+  },
+  {
+    "id": "NY",
+    "name": "New York",
+    "coordinates": [
+      -75.4999,
+      43.2994
+    ]
+  },
+  {
+    "id": "NC",
+    "name": "North Carolina",
+    "coordinates": [
+      -79.0193,
+      35.7596
+    ]
+  },
+  {
+    "id": "ND",
+    "name": "North Dakota",
+    "coordinates": [
+      -101.002,
+      47.5515
+    ]
+  },
+  {
+    "id": "OH",
+    "name": "Ohio",
+    "coordinates": [
+      -82.9071,
+      40.4173
+    ]
+  },
+  {
+    "id": "OK",
+    "name": "Oklahoma",
+    "coordinates": [
+      -97.0929,
+      35.0078
+    ]
+  },
+  {
+    "id": "OR",
+    "name": "Oregon",
+    "coordinates": [
+      -120.5542,
+      43.8041
+    ]
+  },
+  {
+    "id": "PA",
+    "name": "Pennsylvania",
+    "coordinates": [
+      -77.1945,
+      41.2033
+    ]
+  },
+  {
+    "id": "RI",
+    "name": "Rhode Island",
+    "coordinates": [
+      -71.4774,
+      41.5801
+    ]
+  },
+  {
+    "id": "SC",
+    "name": "South Carolina",
+    "coordinates": [
+      -81.1637,
+      33.8361
+    ]
+  },
+  {
+    "id": "SD",
+    "name": "South Dakota",
+    "coordinates": [
+      -99.9018,
+      43.9695
+    ]
+  },
+  {
+    "id": "TN",
+    "name": "Tennessee",
+    "coordinates": [
+      -86.5804,
+      35.5175
+    ]
+  },
+  {
+    "id": "TX",
+    "name": "Texas",
+    "coordinates": [
+      -99.9018,
+      31.9686
+    ]
+  },
+  {
+    "id": "UT",
+    "name": "Utah",
+    "coordinates": [
+      -111.0937,
+      39.3209
+    ]
+  },
+  {
+    "id": "VT",
+    "name": "Vermont",
+    "coordinates": [
+      -72.5778,
+      44.5588
+    ]
+  },
+  {
+    "id": "VA",
+    "name": "Virginia",
+    "coordinates": [
+      -78.6569,
+      37.4316
+    ]
+  },
+  {
+    "id": "WA",
+    "name": "Washington",
+    "coordinates": [
+      -120.7401,
+      47.7511
+    ]
+  },
+  {
+    "id": "WV",
+    "name": "West Virginia",
+    "coordinates": [
+      -80.4549,
+      38.5976
+    ]
+  },
+  {
+    "id": "WI",
+    "name": "Wisconsin",
+    "coordinates": [
+      -88.7879,
+      43.7844
+    ]
+  },
+  {
+    "id": "WY",
+    "name": "Wyoming",
+    "coordinates": [
+      -107.2903,
+      43.0759
+    ]
+  },
+  {
+    "id": "DC",
+    "name": "District of Columbia",
+    "coordinates": [
+      -77.0369,
+      38.9072
+    ]
+  }
+]

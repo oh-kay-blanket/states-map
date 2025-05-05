@@ -1,14 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import stateLabels from "./us-state-labels.json";
 
-import {
-	ComposableMap,
-	Geographies,
-	Geography,
-	ZoomableGroup,
-} from "react-simple-maps";
+import { ComposableMap,	Geographies, Geography,	ZoomableGroup, Annotation } from "react-simple-maps";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -18,15 +12,15 @@ function App() {
 
   return (
     <>
-			<h1>US Map</h1>
-			<p>Click on a state to learn more about it</p>
-			<div id='map-container'>
-				<ComposableMap projection="geoAlbersUsa">
-					<ZoomableGroup
-					center={position.coordinates}
-					zoom={position.zoom}
-					onMoveEnd={(pos) => setPosition(pos)}
-					>
+		<h1>US Map</h1>
+		<p>Click on a state to learn more about it</p>
+		<div id='map-container'>
+			<ComposableMap projection="geoAlbersUsa">
+				<ZoomableGroup
+				center={position.coordinates}
+				zoom={position.zoom}
+				onMoveEnd={(pos) => setPosition(pos)}
+				>
 					<Geographies geography={geoUrl}>
 						{({ geographies }) =>
 						geographies.map((geo) => (
@@ -43,15 +37,28 @@ function App() {
 						))
 						}
 					</Geographies>
-					</ZoomableGroup>
-				</ComposableMap>
+					{stateLabels.map(({ id, coordinates }) => (
+						<Annotation
+						key={id}
+						subject={coordinates}
+						dx={0}
+						dy={0}
+						connectorProps={{ stroke: "none" }}
+						>
+						<text x="0" y="0" textAnchor="middle" alignmentBaseline="middle" fontSize={8}>
+							{id}
+						</text>
+						</Annotation>
+					))}
+				</ZoomableGroup>
+			</ComposableMap>
+		</div>
+		{selectedState && (
+			<div className="state-info">
+				<p>Active legislation in {selectedState}</p>
 			</div>
-			{selectedState && (
-				<div className="state-info">
-					<p>Active legislation in {selectedState}</p>
-				</div>
-			)}
-		</>
+		)}
+	</>
   )
 }
 
