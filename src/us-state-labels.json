@@ -2,7 +2,7 @@
 	{
 		"id": "AL",
 		"name": "Alabama",
-		"coordinates": [-86.9023, 32.3182]
+		"coordinates": [-86.9023, 32.7]
 	},
 	{
 		"id": "AK",
@@ -27,7 +27,7 @@
 	{
 		"id": "CO",
 		"name": "Colorado",
-		"coordinates": [-105.7821, 39.5501]
+		"coordinates": [-105.7821, 39]
 	},
 	{
 		"id": "CT",
@@ -47,7 +47,7 @@
 	{
 		"id": "GA",
 		"name": "Georgia",
-		"coordinates": [-82.9001, 32.1656]
+		"coordinates": [-83.2, 32.3]
 	},
 	{
 		"id": "HI",
@@ -62,7 +62,7 @@
 	{
 		"id": "IL",
 		"name": "Illinois",
-		"coordinates": [-89.3985, 40.6331]
+		"coordinates": [-89.3985, 40]
 	},
 	{
 		"id": "IN",
@@ -72,12 +72,12 @@
 	{
 		"id": "IA",
 		"name": "Iowa",
-		"coordinates": [-93.0977, 41.878]
+		"coordinates": [-93.4, 41.878]
 	},
 	{
 		"id": "KS",
 		"name": "Kansas",
-		"coordinates": [-98.4842, 39.0119]
+		"coordinates": [-98.4842, 38.5119]
 	},
 	{
 		"id": "KY",
@@ -117,7 +117,7 @@
 	{
 		"id": "MS",
 		"name": "Mississippi",
-		"coordinates": [-89.3985, 32.3547]
+		"coordinates": [-89.3985, 32.7]
 	},
 	{
 		"id": "MO",
@@ -137,7 +137,7 @@
 	{
 		"id": "NV",
 		"name": "Nevada",
-		"coordinates": [-116.4194, 38.8026]
+		"coordinates": [-116.4194, 39]
 	},
 	{
 		"id": "NH",
@@ -162,7 +162,7 @@
 	{
 		"id": "NC",
 		"name": "North Carolina",
-		"coordinates": [-79.0193, 35.7596]
+		"coordinates": [-79.0193, 35.4596]
 	},
 	{
 		"id": "ND",
@@ -187,7 +187,7 @@
 	{
 		"id": "PA",
 		"name": "Pennsylvania",
-		"coordinates": [-77.6945, 41]
+		"coordinates": [-77.6945, 40.8]
 	},
 	{
 		"id": "RI",
@@ -197,12 +197,12 @@
 	{
 		"id": "SC",
 		"name": "South Carolina",
-		"coordinates": [-81.1637, 33.8361]
+		"coordinates": [-80.8, 33.6]
 	},
 	{
 		"id": "SD",
 		"name": "South Dakota",
-		"coordinates": [-99.9018, 43.9695]
+		"coordinates": [-100.2, 44.4]
 	},
 	{
 		"id": "TN",
@@ -217,12 +217,12 @@
 	{
 		"id": "UT",
 		"name": "Utah",
-		"coordinates": [-111.0937, 39.3209]
+		"coordinates": [-111.3937, 39]
 	},
 	{
 		"id": "VT",
 		"name": "Vermont",
-		"coordinates": [-72.5778, 44.5588]
+		"coordinates": [-72.5778, 44.44]
 	},
 	{
 		"id": "VA",
