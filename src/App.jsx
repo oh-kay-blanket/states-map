@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import stateLabels from './us-state-labels.json'
 import bills from './bills-output.json'
+import geoUrl from './states.json'
 
 import {
 	ComposableMap,
@@ -11,11 +12,10 @@ import {
 	Annotation,
 } from 'react-simple-maps'
 
-const geoUrl = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'
-
 function App() {
 	const [position, setPosition] = useState({ coordinates: [-97, 38], zoom: 1 })
 	const [selectedState, setSelectedState] = useState(null)
+	const [activeGeography, setActiveGeography] = useState(null)
 
 	const getBillsByState = (selectedState) => {
 		const filteredBills = bills.filter((bill) => bill.State == selectedState)
@@ -27,8 +27,6 @@ function App() {
 					{cat} {i < bill.Category.split(',').length - 1 && ', '}
 				</span>
 			))
-
-			console.log(categories)
 
 			// Status class
 			const statusClass = `status ${bill.Status.toLowerCase()}`
@@ -95,18 +93,32 @@ function App() {
 					>
 						<Geographies geography={geoUrl}>
 							{({ geographies }) =>
-								geographies.map((geo) => (
-									<Geography
-										key={geo.rsmKey}
-										geography={geo}
-										onClick={() => setSelectedState(geo.properties.name)}
-										style={{
-											default: { fill: '#e99ca6', outline: 'none' },
-											hover: { fill: '#7fc7e0', outline: 'none' },
-											pressed: { fill: '#7fc7e0', outline: 'none' },
-										}}
-									/>
-								))
+								geographies.map((geo) => {
+									const isActive = activeGeography === geo.rsmKey
+									return (
+										<Geography
+											key={geo.rsmKey}
+											geography={geo}
+											onClick={() => setSelectedState(geo.properties.name)}
+											// onClick={() => setActiveGeography(geo.rsmKey)}
+											onFocus={() => setActiveGeography(geo.rsmKey)} // Optional: support keyboard nav
+											style={{
+												default: {
+													fill: isActive ? '#7fc7e0cc' : '#e99ca6',
+													outline: 'none',
+												},
+												hover: {
+													fill: isActive ? '#7fc7e0cc' : '#7fc7e0',
+													outline: 'none',
+												},
+												pressed: {
+													fill: isActive ? '#7fc7e0cc' : '#7fc7e0',
+													outline: 'none',
+												},
+											}}
+										/>
+									)
+								})
 							}
 						</Geographies>
 						{stateLabels.map(({ id, coordinates }) => (
