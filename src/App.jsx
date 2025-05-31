@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import stateLabels from './us-state-labels.json'
 import bills from './bills-output.json'
+import billsUS from './bills-us-output.json'
 import geoUrl from './states.json'
 
 import Bill from './Bill'
@@ -23,6 +24,10 @@ function App() {
 		const filteredBills = bills.filter((bill) => bill.State == selectedState)
 
 		return filteredBills.map((bill, idx) => <Bill key={idx} bill={bill} />)
+	}
+
+	const getUSBills = () => {
+		return billsUS.map((bill, idx) => <Bill key={idx} bill={bill} />)
 	}
 
 	return (
@@ -90,7 +95,11 @@ function App() {
 			{selectedState ? (
 				<>
 					<h2>{selectedState}</h2>
-					<ul className='bills'>{getBillsByState(selectedState)}</ul>
+					<ul className='bills'>
+						{selectedState !== 'National Bills'
+							? getBillsByState(selectedState)
+							: getUSBills()}
+					</ul>
 				</>
 			) : (
 				<p>Select a state</p>
