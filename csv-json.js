@@ -10,7 +10,7 @@ function normalizeQuotes(text) {
 		.replace(/[`´]/g, "'")
 }
 
-const raw = await fs.readFile('bills.csv', 'utf8')
+const raw = await fs.readFile('bills-us.csv', 'utf8')
 
 const records = parse(raw, {
 	columns: true,
