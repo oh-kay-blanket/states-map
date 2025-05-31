@@ -248,5 +248,10 @@
 		"id": "WY",
 		"name": "Wyoming",
 		"coordinates": [-107.2903, 43.0759]
+	},
+	{
+		"id": "National Bills",
+		"name": "National Bills",
+		"coordinates": [-78.3903, 48]
 	}
 ]
