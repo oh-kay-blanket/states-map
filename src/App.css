@@ -29,6 +29,8 @@ body {
 
 h1 {
 	margin-bottom: 0;
+	text-align: center;
+	text-wrap: balance;
 }
 
 #map-container {
@@ -39,7 +41,7 @@ h1 {
 }
 
 svg.rsm-svg {
-	border: 2px solid #ccc;
+	border: 1px solid #ccc;
 	border-radius: 16px;
 }
 
@@ -136,6 +138,16 @@ path {
 .summary {
 	text-align: justify;
 	line-height: 1.25rem;
+}
+
+.summary--more {
+	margin-top: 8px;
+	background: none;
+	color: #187a9b;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font-size: 0.9em;
 }
 
 .bill-link {
