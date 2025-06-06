@@ -5,7 +5,7 @@ import bills from './bills-output.json'
 import billsUS from './bills-us-output.json'
 import geoUrl from './states.json'
 
-import Bill from './Bill'
+import Bill from './Bill.tsx'
 
 import {
 	ComposableMap,
