@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import './App.css'
 import stateLabels from './us-state-labels.json'
@@ -22,8 +23,11 @@ function App() {
 
 	const getBillsByState = (selectedState) => {
 		const filteredBills = bills.filter((bill) => bill.State == selectedState)
-
-		return filteredBills.map((bill, idx) => <Bill key={idx} bill={bill} />)
+		if (filteredBills.length > 0) {
+			return filteredBills.map((bill, idx) => <Bill key={idx} bill={bill} />)
+		} else {
+			return <p>🎉 No anti-trans bills found in {selectedState} 🎉</p>
+		}
 	}
 
 	const getUSBills = () => {
@@ -33,77 +37,81 @@ function App() {
 	return (
 		<>
 			<h1>Anti-Trans Legislation Tracker</h1>
-			<div id='map-container'>
-				<ComposableMap projection='geoAlbersUsa'>
-					<ZoomableGroup
-						center={position.coordinates}
-						zoom={position.zoom}
-						onMoveEnd={(pos) => setPosition(pos)}
-					>
-						<Geographies geography={geoUrl}>
-							{({ geographies }) =>
-								geographies.map((geo) => {
-									const isActive = activeGeography === geo.rsmKey
-									return (
-										<Geography
-											key={geo.rsmKey}
-											geography={geo}
-											onClick={() => setSelectedState(geo.properties.name)}
-											// onClick={() => setActiveGeography(geo.rsmKey)}
-											onFocus={() => setActiveGeography(geo.rsmKey)} // Optional: support keyboard nav
-											style={{
-												default: {
-													fill: isActive ? '#7fc7e0cc' : '#e99ca6',
-													outline: 'none',
-												},
-												hover: {
-													fill: isActive ? '#7fc7e0cc' : '#7fc7e0',
-													outline: 'none',
-												},
-												pressed: {
-													fill: isActive ? '#7fc7e0cc' : '#7fc7e0',
-													outline: 'none',
-												},
-											}}
-										/>
-									)
-								})
-							}
-						</Geographies>
-						{stateLabels.map(({ id, coordinates }) => (
-							<Annotation
-								key={id}
-								subject={coordinates}
-								dx={0}
-								dy={0}
-								connectorProps={{ stroke: 'none' }}
-							>
-								<text
-									x='0'
-									y='0'
-									textAnchor='middle'
-									alignmentBaseline='middle'
-									fontSize={8}
+			<div className='legislation-widget'>
+				<div id='map-container'>
+					<ComposableMap projection='geoAlbersUsa'>
+						<ZoomableGroup
+							center={position.coordinates}
+							zoom={position.zoom}
+							onMoveEnd={(pos) => setPosition(pos)}
+						>
+							<Geographies geography={geoUrl}>
+								{({ geographies }) =>
+									geographies.map((geo) => {
+										const isActive = activeGeography === geo.rsmKey
+										return (
+											<Geography
+												key={geo.rsmKey}
+												geography={geo}
+												onClick={() => setSelectedState(geo.properties.name)}
+												// onClick={() => setActiveGeography(geo.rsmKey)}
+												onFocus={() => setActiveGeography(geo.rsmKey)} // Optional: support keyboard nav
+												style={{
+													default: {
+														fill: isActive ? '#7fc7e0cc' : '#e99ca6',
+														outline: 'none',
+													},
+													hover: {
+														fill: isActive ? '#7fc7e0cc' : '#7fc7e0',
+														outline: 'none',
+													},
+													pressed: {
+														fill: isActive ? '#7fc7e0cc' : '#7fc7e0',
+														outline: 'none',
+													},
+												}}
+											/>
+										)
+									})
+								}
+							</Geographies>
+							{stateLabels.map(({ id, coordinates }) => (
+								<Annotation
+									key={id}
+									subject={coordinates}
+									dx={0}
+									dy={0}
+									connectorProps={{ stroke: 'none' }}
 								>
-									{id}
-								</text>
-							</Annotation>
-						))}
-					</ZoomableGroup>
-				</ComposableMap>
+									<text
+										x='0'
+										y='0'
+										textAnchor='middle'
+										alignmentBaseline='middle'
+										fontSize={8}
+									>
+										{id}
+									</text>
+								</Annotation>
+							))}
+						</ZoomableGroup>
+					</ComposableMap>
+				</div>
+				{selectedState ? (
+					<div className='bill-list'>
+						<h2>{selectedState}</h2>
+						<ul className='bills'>
+							{selectedState !== 'National Bills'
+								? getBillsByState(selectedState)
+								: getUSBills()}
+						</ul>
+					</div>
+				) : (
+					<div className='bill-list'>
+						<p>Select a state</p>
+					</div>
+				)}
 			</div>
-			{selectedState ? (
-				<>
-					<h2>{selectedState}</h2>
-					<ul className='bills'>
-						{selectedState !== 'National Bills'
-							? getBillsByState(selectedState)
-							: getUSBills()}
-					</ul>
-				</>
-			) : (
-				<p>Select a state</p>
-			)}
 		</>
 	)
 }

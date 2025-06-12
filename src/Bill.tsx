@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Bill.css'
 
 const Bill = ({ bill, limit = 15 }) => {
 	const [expanded, setExpanded] = useState(false)
@@ -25,9 +26,7 @@ const Bill = ({ bill, limit = 15 }) => {
 
 	// Get category list
 	const categories = bill.Category.split(',').map((cat, i) => (
-		<span className='category'>
-			{cat} {i < bill.Category.split(',').length - 1 && ', '}
-		</span>
+		<span className='category'>{cat}</span>
 	))
 
 	// Status class
@@ -40,25 +39,13 @@ const Bill = ({ bill, limit = 15 }) => {
 	}
 
 	const updated = (
-		<p className='updated'>Updated: {bill['Last Activity Date']}</p>
+		<span className='updated'> ({bill['Last Activity Date']})</span>
 	)
 
 	return (
 		<li className='bill'>
 			<div className='row'>
-				<div className='row--sub'>
-					<p className='case'>{bill['﻿Case Name']}</p>
-					<p className={statusClass}>
-						<strong>{bill.Status}</strong>
-						{getProgress()}
-					</p>
-				</div>
-				{updated}
-			</div>
-			<p className='summary'>{summary}</p>
-
-			<div className='row'>
-				<p className='categories'>{categories}</p>
+				<p className='case'>{bill['﻿Case Name']}</p>
 				<a
 					href={bill['Bill Information Link']}
 					className='bill-link'
@@ -77,6 +64,21 @@ const Bill = ({ bill, limit = 15 }) => {
 						<path d='M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7H5V5z' />
 					</svg>
 				</a>
+			</div>
+			<div className='row'>
+				<div className='row--sub'>
+					<span className={statusClass}></span>
+					<p>
+						<span className='status-title'>{bill.Status}</span>
+						{getProgress()}
+						{updated}
+					</p>
+				</div>
+			</div>
+			<p className='summary'>{summary}</p>
+
+			<div className='row'>
+				<p className='categories'>{categories}</p>
 			</div>
 		</li>
 	)

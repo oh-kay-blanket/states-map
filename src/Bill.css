@@ -1,0 +1,99 @@
+.bill {
+	font-size: 14px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	padding: 1rem;
+	margin: .5rem auto;
+	border-radius: .5rem;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.row--sub {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.case {
+	margin-right: .5rem;
+	/* line-height: 1.5rem; */
+	white-space: nowrap;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.status {
+	display: inline-block;
+	border-radius: 50px;
+	margin-right: .5rem;
+	width: max-content;
+	width: 20px;
+	height: 20px;
+}
+
+.active {
+	background-color: #ffe9ba;
+}
+
+.passed {
+	background-color: #fbd7dd;
+}
+
+.failed {
+	background-color: #cfe2ff;
+}
+
+.status-title {
+	font-weight: 500;
+}
+
+.updated {
+	font-size: 12px;
+}
+
+.categories {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.category {
+	background-color: #eee;
+	padding: .25rem .5rem;
+	margin: .25rem .25rem .25rem 0;
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .35px;
+	font-size: 10px;
+	color: #333;
+	white-space: nowrap;
+}
+
+.category:last-of-type {
+	margin: .25rem 0;
+}
+
+.summary {
+	text-align: justify;
+	line-height: 1.25rem;
+}
+
+.summary--more {
+	margin-top: 8px;
+	background: none;
+	color: #187a9b;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+
+.bill-link {
+	color: #333;
+}
