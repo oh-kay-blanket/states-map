@@ -48,6 +48,18 @@ path {
 	position: absolute;
 }
 
+.selected-state {
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+}
+
+.selected-state p {
+	margin: 0 0 0 .5rem;
+}
+
 .bill-list {
 	width: 100%;
 }

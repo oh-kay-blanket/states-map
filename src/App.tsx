@@ -22,6 +22,8 @@ function App() {
 	const [activeGeography, setActiveGeography] = useState(null)
 
 	const getBillsByState = (selectedState) => {
+		window.scrollTo(0, 0)
+
 		const filteredBills = bills.filter((bill) => bill.State == selectedState)
 		if (filteredBills.length > 0) {
 			return filteredBills.map((bill, idx) => <Bill key={idx} bill={bill} />)
@@ -31,6 +33,7 @@ function App() {
 	}
 
 	const getUSBills = () => {
+		window.scrollTo(0, 0)
 		return billsUS.map((bill, idx) => <Bill key={idx} bill={bill} />)
 	}
 
@@ -99,7 +102,17 @@ function App() {
 				</div>
 				{selectedState ? (
 					<div className='bill-list'>
-						<h2>{selectedState}</h2>
+						<div className='selected-state'>
+							<h2>{selectedState}</h2>
+							{selectedState !== 'National Bills' ? (
+								<p>
+									({bills.filter((bill) => bill.State == selectedState).length}{' '}
+									bills)
+								</p>
+							) : (
+								<p>({billsUS.length} bills)</p>
+							)}
+						</div>
 						<ul className='bills'>
 							{selectedState !== 'National Bills'
 								? getBillsByState(selectedState)
@@ -108,7 +121,7 @@ function App() {
 					</div>
 				) : (
 					<div className='bill-list'>
-						<p>Select a state</p>
+						<h2>Select a location</h2>
 					</div>
 				)}
 			</div>
