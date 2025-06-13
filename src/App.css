@@ -24,7 +24,8 @@
 
 @media (min-width: 1000px) {
 	#map-container {
-		width: 45%;
+		width: 65%;
+		padding: .5rem;
 		position: sticky;
 		top: 1rem;
 	}
@@ -66,7 +67,8 @@ path {
 
 @media (min-width: 1000px) {
 	.bill-list {
-		width: 45%;
+		width: 40%;
+		padding: .5rem;
 	}
 }
 
